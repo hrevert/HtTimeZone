@@ -1,0 +1,35 @@
+{
+    "name": "hrevert/ht-time-zone",
+    "description": "HtTimeZone is a Zend Framework 2 module to simplify working with timezones. This module is useful when your application users are located all around the world.",
+    "type": "library",
+    "keywords": [
+        "zf2"
+    ],
+    "homepage": "https://github.com/hrevert/HtTimeZone",
+    "authors": [
+        {
+            "name": "Hrevert Technologies",
+            "email": "info@hrevert.com"
+        },
+        {
+            "name": "ojhaujjwal",
+            "email": "bring2uo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zend-modulemanager": "~2.1",
+        "zendframework/zend-mvc": "~2.1"
+    },
+    "suggest": {
+        
+    },
+    "autoload": {
+        "psr-0": {
+            "HtTimeZone": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
