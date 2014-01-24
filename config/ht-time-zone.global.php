@@ -36,7 +36,7 @@ $moduleOptions = array(
      * If you dont provide this, all regions will be used.
      *
      */
-     // 'region' => 'Europe',
+     //'region' => DateTimeZone::EUROPE,
      
 
 );
