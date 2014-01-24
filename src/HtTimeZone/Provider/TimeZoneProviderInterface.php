@@ -2,7 +2,7 @@
 
 namespace HtTimeZone\Provider;
 
-class TimeZoneProviderInterface
+interface TimeZoneProviderInterface
 {
     public function getTimeZone();
 }

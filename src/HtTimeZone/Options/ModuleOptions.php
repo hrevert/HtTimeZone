@@ -4,9 +4,9 @@ namespace HtTimeZone\Options;
 use Zend\Stdlib\AbstractOptions;
 use DateTimeZone;
 
-class ModuleOptions extends AbstractsOpions
+class ModuleOptions extends AbstractOptions
 {
-    protected $__strictMode__ = true;
+    protected $__strictMode__ = false;
 
     protected $defaultTimeZone; 
 
@@ -32,8 +32,8 @@ class ModuleOptions extends AbstractsOpions
 
     public function getRegion()
     {
-        if (!$this->region === null) {
-            !$this->region = DateTimeZone::ALL;
+        if ($this->region === null) {
+            $this->region = DateTimeZone::ALL;
         }
         return $this->region;
     }

@@ -36,7 +36,7 @@ $moduleOptions = array(
      * If you dont provide this, all regions will be used.
      *
      */
-     // region => 'Europe',
+     // 'region' => 'Europe',
      
 
 );
@@ -49,7 +49,7 @@ $moduleOptions = array(
 return array(
     'ht_time_zone' => $moduleOptions,
     'service_manager' => array(
-        'factories' => array(
+        'aliases' => array(
             'HtTimeZone\TimeZoneProvider' => $moduleOptions['time_zone_provider'],
         )
     )

@@ -3,6 +3,7 @@
 namespace HtTimeZone\Service;
 
 use DateTimeZone;
+use DateTime;
 
 class TimeZone
 {
@@ -13,7 +14,6 @@ class TimeZone
     protected $timezoneOptions;
 
     use \Zend\ServiceManager\ServiceLocatorAwareTrait;
-
 
     public function getModuleOptions()
     {

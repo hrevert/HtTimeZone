@@ -39,4 +39,13 @@ class Module
             )
         );
     }
+
+    public function getViewHelperConfig()
+    {
+        return array(
+            'factories' => array(
+                'HtTimeZone' => 'HtTimeZone\View\Helper\Factory\HtTimeZoneFactory',
+            )
+        );
+    }
 }
