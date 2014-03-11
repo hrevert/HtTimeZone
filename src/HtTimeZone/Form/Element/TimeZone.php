@@ -2,6 +2,8 @@
 
 namespace HtTimeZone\Form\Element;
 
+use Zend\Form\Element\Select;
+
 class TimeZone extends Select
 {
     public function __construct()

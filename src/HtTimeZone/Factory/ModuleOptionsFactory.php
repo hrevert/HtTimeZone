@@ -9,8 +9,6 @@ class ModuleOptionsFactory implements FactoryInterface
 {
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $config = $serviceLocator->get('Config');
-        $moduleConfig = isset($config['ht_time_zone']) ? $config['ht_time_zone'] : array();
-        return new ModuleOptions($moduleConfig);
+        return new ModuleOptions($serviceLocator->get('Config')['ht_time_zone']);
     }
 }

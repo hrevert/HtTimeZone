@@ -1,9 +1,7 @@
 <?php
-
 namespace HtTimeZoneTest;
 
 use HtTimeZone\Module;
-
 
 class ModuleTest extends \PHPUnit_Framework_TestCase
 {

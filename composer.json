@@ -23,15 +23,9 @@
         "zendframework/zend-modulemanager": "~2.1",
         "zendframework/zend-mvc": "~2.1"
     },
-    "suggest": {
-        
-    },
     "autoload": {
         "psr-0": {
             "HtTimeZone": "src/"
-        },
-        "classmap": [
-            "./Module.php"
-        ]
+        }
     }
 }
