@@ -7,7 +7,8 @@ class User extends \ZfcUser\Entity\User
 
     public function setTimeZone($timeZone)
     {
-        $this->timeZone = $timeZone; 
+        $this->timeZone = $timeZone;
+
         return $this;
     }
 

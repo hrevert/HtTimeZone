@@ -1,5 +1,5 @@
 <?php
-    
+
 namespace HtTimeZone\Provider;
 
 use Zend\Authentication\AuthenticationService;
@@ -21,7 +21,7 @@ class ZfcUserTimeZoneProvider implements TimeZoneProviderInterface
     public function getTimeZone()
     {
         if (
-            $this->getAuthenticationService()->hasIdentity() && 
+            $this->getAuthenticationService()->hasIdentity() &&
             $this->getAuthenticationService()->getIdentity()->getTimezone()
         ) {
             return $this->getAuthenticationService()->getIdentity()->getTimeZone();

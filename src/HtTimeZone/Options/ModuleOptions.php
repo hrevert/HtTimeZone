@@ -8,7 +8,7 @@ class ModuleOptions extends AbstractOptions
 {
     protected $__strictMode__ = false;
 
-    protected $defaultTimeZone; 
+    protected $defaultTimeZone;
 
     protected $region;
 
@@ -22,6 +22,7 @@ class ModuleOptions extends AbstractOptions
         if (!$this->defaultTimeZone) {
            $this->defaultTimeZone = date_default_timezone_get();
         }
+
         return $this->defaultTimeZone;
     }
 
@@ -35,6 +36,7 @@ class ModuleOptions extends AbstractOptions
         if ($this->region === null) {
             $this->region = DateTimeZone::ALL;
         }
+
         return $this->region;
     }
 }

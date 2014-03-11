@@ -36,6 +36,7 @@ class TimeZone extends AbstractHelper
         }
 
         $dateTime->setTimeZone($this->getDateTimeZone());
+
         return $dateTime;
     }
 

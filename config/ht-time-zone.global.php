@@ -7,7 +7,7 @@
  */
 
 $moduleOptions = array(
-    
+
     /**
      * Timezone Provider
      *
@@ -16,9 +16,8 @@ $moduleOptions = array(
      *
      * Default is HtTimeZone\ZfcUserTimeZoneProvider (compatible with ZfcUser)
      * To use the default visit this link:
-     */ 
+     */
      // 'time_zone_provider' => 'HtTimeZone\ZfcUserTimeZoneProvider',
-     
 
     /**
      * Default Timezone
@@ -37,10 +36,8 @@ $moduleOptions = array(
      *
      */
      //'region' => DateTimeZone::EUROPE,
-     
 
 );
-
 
 /**
  * You do not need to edit below this line
@@ -54,4 +51,3 @@ return array(
         )
     )
 );
-

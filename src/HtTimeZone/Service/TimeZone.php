@@ -37,7 +37,7 @@ class TimeZone
     {
         if (!$this->timezoneOptions) {
             $this->timezoneOptions = array();
-            $timezones = DateTimeZone::listIdentifiers($this->getModuleOptions()->getRegion()); 
+            $timezones = DateTimeZone::listIdentifiers($this->getModuleOptions()->getRegion());
             $timezoneOffsets = array();
             foreach ($timezones as $timezone) {
                 $tz = new DateTimeZone($timezone);
@@ -48,7 +48,7 @@ class TimeZone
             asort($timezoneOffsets);
 
             $timezoneOptions = array();
-            foreach($timezoneOffsets as $timezone => $offset){
+            foreach ($timezoneOffsets as $timezone => $offset) {
                 $offsetPrefix = $offset < 0 ? '-' : '+';
                 $offsetFormatted = gmdate( 'H:i', abs($offset) );
 
@@ -57,7 +57,7 @@ class TimeZone
                 $timezoneOptions[$timezone] = "($prettyOffset) $timezone";
             }
 
-            $this->timezoneOptions = $timezoneOptions;                       
+            $this->timezoneOptions = $timezoneOptions;
         }
 
         return $this->timezoneOptions;
