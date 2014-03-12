@@ -9,7 +9,7 @@ class TimeZone
 {
     protected $moduleOptions;
 
-    protected $timeZoneProvider;
+    protected $clientTimeZoneProvider;
 
     protected $timezoneOptions;
 
@@ -24,13 +24,13 @@ class TimeZone
         return $this->moduleOptions;
     }
 
-    public function getTimeZoneProvider()
+    public function getClientTimeZoneProvider()
     {
-        if (!$this->timeZoneProvider) {
-            $this->timeZoneProvider = $this->getServiceLocator()->get('HtTimeZone\TimeZoneProvider');
+        if (!$this->clientTimeZoneProvider) {
+            $this->clientTimeZoneProvider = $this->getServiceLocator()->get('HtTimeZone\ClientTimeZoneProvider');
         }
 
-        return $this->timeZoneProvider;
+        return $this->clientTimeZoneProvider;
     }
 
     public function getTimeZoneOptions()
@@ -63,12 +63,12 @@ class TimeZone
         return $this->timezoneOptions;
     }
 
-    public function getTimeZone()
+    public function getClientTimeZone()
     {
-        if ($this->getTimeZoneProvider()->getTimeZone()) {
-            return $this->getTimeZoneProvider()->getTimeZone();
+        if ($this->getClientTimeZoneProvider()->getTimeZone()) {
+            return $this->getClientTimeZoneProvider()->getTimeZone();
         }
 
-        return $this->getModuleOptions()->getDefaultTimeZone();
+        return $this->getModuleOptions()->getDefaultClientTimeZone();
     }
 }

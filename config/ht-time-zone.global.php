@@ -17,16 +17,21 @@ $moduleOptions = array(
      * Default is HtTimeZone\ZfcUserTimeZoneProvider (compatible with ZfcUser)
      * To use the default visit this link:
      */
-     // 'time_zone_provider' => 'HtTimeZone\ZfcUserTimeZoneProvider',
+     // 'client_time_zone_provider' => 'HtTimeZone\ZfcUserTimeZoneProvider',
 
     /**
      * Default Timezone
      *
-     * Select Timezone to be used when timezone provider returns null or false
+     * Select Timezone to be used when the client timezone provider returns null or false
      * Optional. If not provided, it will be retrieved from php function, `date_default_timezone_get`
      */
-    //'default_time_zone' => '',
+    //'default_client_time_zone' => '',
 
+    /**
+     * Server Time Zone
+     *
+     */
+    // 'server_time_zone' => 'UTC',
     /**
      * Timezone Region
      *
@@ -47,7 +52,7 @@ return array(
     'ht_time_zone' => $moduleOptions,
     'service_manager' => array(
         'aliases' => array(
-            'HtTimeZone\TimeZoneProvider' => $moduleOptions['time_zone_provider'],
+            'HtTimeZone\ClientTimeZoneProvider' => $moduleOptions['time_zone_provider'],
         )
     )
 );

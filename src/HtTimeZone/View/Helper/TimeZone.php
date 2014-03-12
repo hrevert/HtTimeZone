@@ -4,17 +4,16 @@ namespace HtTimeZone\View\Helper;
 
 use Zend\View\Helper\AbstractHelper;
 use DateTime;
+use DateTimeZone;
 
 class TimeZone extends AbstractHelper
 {
-    protected $timeZone;
+    protected $clientTimeZone;
 
-    protected $dateTimeZone;
-
-    public function __construct($timeZone = null)
+    public function __construct($clientTimeZone = null)
     {
-        if ($timeZone) {
-            $this->setTimeZone($timeZone);
+        if ($clientTimeZone) {
+            $this->setClientTimeZone($clientTimeZone);
         }
     }
 
@@ -35,27 +34,18 @@ class TimeZone extends AbstractHelper
             );
         }
 
-        $dateTime->setTimeZone($this->getDateTimeZone());
+        $dateTime->setTimeZone($this->getClientTimeZone());
 
         return $dateTime;
     }
 
-    public function setTimeZone($timeZone)
+    public function setClientTimeZone(DateTimeZone $clientTimeZone)
     {
-        $this->timeZone = $timeZone;
+        $this->clientTimeZone = $clientTimeZone;
     }
 
-    public function getTimeZone()
+    public function getClientTimeZone()
     {
-        return $this->timeZone;
-    }
-
-    public function getDateTimeZone()
-    {
-        if (!$this->dateTimeZone) {
-            $this->dateTimeZone = new \DateTimeZone($this->getTimeZone());
-        }
-
-        return $this->dateTimeZone;
+        return $this->clientTimeZone;
     }
 }

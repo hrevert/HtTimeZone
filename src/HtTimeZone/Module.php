@@ -35,7 +35,7 @@ class Module
                 'HtTimeZone\ZfcUserTimeZoneProvider' => 'HtTimeZone\Factory\ZfcUserTimeZoneProviderFactory',
             ],
             'aliases' => [
-                'HtTimeZone\TimeZoneProvider' => 'HtTimeZone\ZfcUserTimeZoneProvider',
+                'HtTimeZone\ClientTimeZoneProvider' => 'HtTimeZone\ZfcUserTimeZoneProvider',
             ]
         ];
     }

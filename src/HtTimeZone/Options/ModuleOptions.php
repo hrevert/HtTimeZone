@@ -8,22 +8,27 @@ class ModuleOptions extends AbstractOptions
 {
     protected $__strictMode__ = false;
 
-    protected $defaultTimeZone;
+    protected $defaultClientTimeZone;
 
     protected $region;
 
-    public function setDefaultTimeZone($defaultTimeZone)
+    protected $serverTimeZone = 'UTC';
+
+    public function setDefaultClientTimeZone($defaultClientTimeZone)
     {
-        $this->defaultTimeZone = $defaultTimeZone;
+        if (is_string($defaultClientTimeZone)) {
+            $defaultClientTimeZone = new DateTimeZone($defaultClientTimeZone);
+        }
+        $this->defaultClientTimeZone = $defaultClientTimeZone;
     }
 
-    public function getDefaultTimeZone()
+    public function getDefaultClientTimeZone()
     {
-        if (!$this->defaultTimeZone) {
-           $this->defaultTimeZone = date_default_timezone_get();
+        if (!$this->defaultClientTimeZone) {
+           $this->setDefaultClientTimeZone(date_default_timezone_get());
         }
 
-        return $this->defaultTimeZone;
+        return $this->defaultClientTimeZone;
     }
 
     public function setRegion($region)
@@ -38,5 +43,23 @@ class ModuleOptions extends AbstractOptions
         }
 
         return $this->region;
+    }
+
+    public function setServerTimeZone($serverTimeZone)
+    {
+        if (is_string($serverTimeZone)) {
+            $serverTimeZone = new DateTimeZone($serverTimeZone);
+        }
+        $this->serverTimeZone = $serverTimeZone;
+    }
+
+    public function getServerTimeZone()
+    {
+        $serverTimeZone = $this->serverTimeZone;
+        if (is_string($serverTimeZone)) {
+            $this->setServerTimeZone($serverTimeZone);
+        }
+
+        return $serverTimeZone;
     }
 }

@@ -9,5 +9,10 @@ return [
             ]
         ],
     ],
-    'ht_time_zone' => []
+    'ht_time_zone' => [],
+    'input_filters' => [
+        'factories' => [
+            'ClientToServerTimeZone' => 'HtTimeZone\Filter\Factory\ClientToServerTimeZoneFactory',
+        ]
+    ]
 ];

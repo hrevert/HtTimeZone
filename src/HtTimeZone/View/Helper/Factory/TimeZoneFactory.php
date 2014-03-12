@@ -10,7 +10,7 @@ class TimeZoneFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $helpers)
     {
         $serviceLocator = $helpers->getServiceLocator();
-        $helper = new TimeZone($serviceLocator->get('HtTimeZone\TimeZoneService')->getTimeZone());
+        $helper = new TimeZone($serviceLocator->get('HtTimeZone\TimeZoneService')->getClientTimeZone());
 
         return $helper;
     }
