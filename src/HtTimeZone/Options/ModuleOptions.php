@@ -6,14 +6,32 @@ use DateTimeZone;
 
 class ModuleOptions extends AbstractOptions
 {
+    /**
+     * @var bool
+     */
     protected $__strictMode__ = false;
 
+    /**
+     * @var string|DateTimeZone
+     */
     protected $defaultClientTimeZone;
 
-    protected $region;
+    /**
+     * @var int
+     */
+    protected $region
 
+    /**
+     * @var string||DateTimeZone
+     */
     protected $serverTimeZone = 'UTC';
 
+    /**
+     * Sets defaultClientTimeZone
+     *
+     * @param string|DateTimeZone $defaultClientTimeZone
+     * @return void
+     */
     public function setDefaultClientTimeZone($defaultClientTimeZone)
     {
         if (is_string($defaultClientTimeZone)) {
@@ -22,6 +40,11 @@ class ModuleOptions extends AbstractOptions
         $this->defaultClientTimeZone = $defaultClientTimeZone;
     }
 
+    /**
+     * Gets defaultClientTimeZone
+     *
+     * @return DateTimeZone
+     */
     public function getDefaultClientTimeZone()
     {
         if (!$this->defaultClientTimeZone) {
@@ -31,11 +54,22 @@ class ModuleOptions extends AbstractOptions
         return $this->defaultClientTimeZone;
     }
 
+    /**
+     * Sets region
+     *
+     * @param int $region
+     * @return void
+     */
     public function setRegion($region)
     {
         $this->region = $region;
     }
 
+    /**
+     * Gets region
+     *
+     * @return int 
+     */
     public function getRegion()
     {
         if ($this->region === null) {
@@ -45,6 +79,12 @@ class ModuleOptions extends AbstractOptions
         return $this->region;
     }
 
+    /**
+     * Sets serverTimeZone
+     *
+     * @param string|DateTimeZone $serverTimeZone
+     * @return void
+     */    
     public function setServerTimeZone($serverTimeZone)
     {
         if (is_string($serverTimeZone)) {
@@ -53,6 +93,11 @@ class ModuleOptions extends AbstractOptions
         $this->serverTimeZone = $serverTimeZone;
     }
 
+    /**
+     * Gets serverTimeZone
+     *
+     * @return DateTimeZone
+     */
     public function getServerTimeZone()
     {
         $serverTimeZone = $this->serverTimeZone;

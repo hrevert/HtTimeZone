@@ -1,13 +1,29 @@
 <?php
 namespace HtTimeZone;
 
-class Module
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Zend\ModuleManager\Feature\ServiceProviderInterface;
+use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
+
+class Module implements 
+    AutoloaderProviderInterface,
+    ConfigProviderInterface,
+    ServiceProviderInterface,
+    ViewHelperProviderInterface
+
 {
+    /**
+     * {@inheritDoc}
+     */
     public function getConfig()
     {
         return include __DIR__ . '/../../config/module.config.php';
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getAutoloaderConfig()
     {
         return [
@@ -22,6 +38,9 @@ class Module
         ];
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getServiceConfig()
     {
         return [
@@ -36,6 +55,9 @@ class Module
         ];
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getViewHelperConfig()
     {
         return [

@@ -7,12 +7,24 @@ use DateTimeZone;
 
 class TimeZoneConverter implements FilterInterface
 {
+    /**
+     * @var string|null
+     */
     protected $inputFormat;
 
+    /**
+     * @var string|null
+     */
     protected $outputFormat;
-    
+
+    /**
+     * @var DateTimeZone
+     */    
     protected $fromTimeZone;
 
+    /**
+     * @var DateTimeZone
+     */ 
     protected $toTimeZone;
 
     public function setInputFormat($inputFormat)

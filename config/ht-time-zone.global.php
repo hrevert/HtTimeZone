@@ -30,6 +30,7 @@ $moduleOptions = array(
     /**
      * Server Time Zone
      *
+     * Default: UTC
      */
     // 'server_time_zone' => 'UTC',
     /**
