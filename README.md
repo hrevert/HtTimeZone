@@ -6,7 +6,7 @@ To use this module you will have to store all the dates in a fixed timezone(UTC 
 
 
 ### Installation
-1. Add `"hrevert/ht-time-zone": "0.0.*",` to your composer.json and run `php composer.phar update` 
+1. Add `"hrevert/ht-time-zone": "dev-master",` to your composer.json and run `php composer.phar update` 
 2. Enable the module in `config/application.config.php`
 3. Copy file located in `./vendor/hrevert/ht-time-zone/config/ht-time-zone.global.php` to `./config/autoload/ht-time-zone.global.php` and change the values as you wish
 
