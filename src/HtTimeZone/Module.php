@@ -25,13 +25,9 @@ class Module
     public function getServiceConfig()
     {
         return [
-            'shared' => [
-                'HtTimeZone\Form\Element\TimeZone' => false,
-            ],
             'factories' => [
                 'HtTimeZone\TimeZoneService' => 'HtTimeZone\Factory\TimeZoneServiceFactory',
                 'HtTimeZone\ModuleOptions' => 'HtTimeZone\Factory\ModuleOptionsFactory',
-                'HtTimeZone\Form\Element\TimeZone' => 'HtTimeZone\Form\Element\Factory\TimeZoneFactory',
                 'HtTimeZone\ZfcUserTimeZoneProvider' => 'HtTimeZone\Factory\ZfcUserTimeZoneProviderFactory',
             ],
             'aliases' => [

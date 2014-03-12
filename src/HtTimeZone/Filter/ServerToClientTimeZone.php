@@ -3,11 +3,11 @@ namespace HtTimeZone\Filter;
 
 use DateTimeZone;
 
-class ClientToServerTimeZone extends TimeZoneConverter
+class ServerToClientTimeZone extends TimeZoneConverter
 {
     public function __construct(DateTimeZone $clientTimeZone, DateTimeZone $serverTimeZone)
     {
-        $this->setFromTimeZone($clientTimeZone);
-        $this->setToTimeZone($serverTimeZone);
+        $this->setFromTimeZone($serverTimeZone);
+        $this->setToTimeZone($clientTimeZone);
     }
 }
