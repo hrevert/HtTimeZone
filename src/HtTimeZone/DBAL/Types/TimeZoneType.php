@@ -1,11 +1,11 @@
 <?php
 namespace HtTimeZone\DBAL\Types;
     
-use Doctrine\DBAL\Types\Type;
+use Doctrine\DBAL\Types\StringType;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use DateTimeZone;
 
-class TimeZoneType extends Type
+class TimeZoneType extends StringType
 {
      /**
       * @param DateTimeZone|string $value
@@ -34,5 +34,6 @@ class TimeZoneType extends Type
         }
 
         return $value;
-    }  
+    }
+      
 }
