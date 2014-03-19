@@ -19,7 +19,7 @@ class ModuleOptions extends AbstractOptions
     /**
      * @var int
      */
-    protected $region
+    protected $region;
 
     /**
      * @var string||DateTimeZone
