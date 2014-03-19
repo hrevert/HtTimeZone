@@ -15,6 +15,9 @@ return [
         'factories' => [
             'ClientToServerTimeZone' => 'HtTimeZone\Filter\Factory\ClientToServerTimeZoneFactory',
             'ServerToClientTimeZone' => 'HtTimeZone\Filter\Factory\ServerToClientTimeZoneFactory',
+        ],
+        'invokables' => [
+            'TimeZoneConverter' => 'HtTimeZone\Filter\TimeZoneConverter',
         ]
     ]
 ];
