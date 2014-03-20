@@ -5,12 +5,14 @@ use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
 use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
+use Zend\ModuleManager\Feature\FilterProviderInterface;
 
 class Module implements 
     AutoloaderProviderInterface,
     ConfigProviderInterface,
     ServiceProviderInterface,
-    ViewHelperProviderInterface
+    ViewHelperProviderInterface,
+    FilterProviderInterface
 
 {
     /**
@@ -71,6 +73,22 @@ class Module implements
                 'HtTimeZone' => 'HtTimeZone\View\Helper\TimeZone',
                 'HtTimeInterval' => 'HtTimeZone\View\Helper\TimeInterval',
             ]
+        ];
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFilterConfig()
+    {
+        return [
+            'factories' => [
+                'ClientToServerTimeZone' => 'HtTimeZone\Filter\Factory\ClientToServerTimeZoneFactory',
+                'ServerToClientTimeZone' => 'HtTimeZone\Filter\Factory\ServerToClientTimeZoneFactory',
+            ],
+            'invokables' => [
+                'TimeZoneConverter' => 'HtTimeZone\Filter\TimeZoneConverter',
+            ]        
         ];
     }
 }
