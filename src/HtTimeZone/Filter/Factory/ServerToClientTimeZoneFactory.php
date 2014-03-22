@@ -14,7 +14,7 @@ class ServerToClientTimeZoneFactory implements FactoryInterface
 
         return new ServerToClientTimeZone(
             $serviceLocator->get('HtTimeZone\TimeZoneService')->getClientTimeZone(),
-            $options->get('getServerTimeZone')
+            $options->getServerTimeZone()
         );
     }
 }
