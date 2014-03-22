@@ -3,9 +3,9 @@ Filters
 This module comes with some filters related to timezone. If you don`t know filters, [this](http://framework.zend.com/manual/2.3/en/modules/zend.filter.html) should be the first one to read.
 
 ## Included filters
-1. [HtTimeZone\Filter\TimeZoneConverter](../src/Filter/TimeZoneConverter.php)
-2. [HtTimeZone\Filter\ClientToServerTimeZone](../src/Filter/ClientToServerTimeZone.php)
-3. [HtTimeZone\Filter\ServerToClientTimeZone](../src/Filter/ServerToClientTimeZone.php)
+1. [HtTimeZone\Filter\TimeZoneConverter](../src/HtTimeZone/Filter/TimeZoneConverter.php)
+2. [HtTimeZone\Filter\ClientToServerTimeZone](../src/HtTimeZone/Filter/ClientToServerTimeZone.php)
+3. [HtTimeZone\Filter\ServerToClientTimeZone](../src/HtTimeZone/Filter/ServerToClientTimeZone.php)
 
 ## Usage
 1. `HtTimeZone\Filter\TimeZoneConverter`
