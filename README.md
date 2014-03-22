@@ -10,5 +10,5 @@ To use this module you will have to store all the dates in a fixed timezone(UTC 
 2. Enable the module in `config/application.config.php`
 3. Copy file located in `./vendor/hrevert/ht-time-zone/config/ht-time-zone.global.php` to `./config/autoload/ht-time-zone.global.php` and change the values as you wish
 
-For more details on how to use this module, please check this [wiki](https://github.com/hrevert/HtTimeZone/wiki) .
+For more details on how to use this module, please check [/docs](docs/) folder.
 
