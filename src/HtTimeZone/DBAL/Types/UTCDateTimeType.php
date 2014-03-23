@@ -3,7 +3,7 @@ namespace HtTimeZone\DBAL\Types;
 
 use DateTimeZone;
 
-class UTCDateTimeType extends AbstractTimeZoneDateType
+class UTCDateTimeType extends AbstractTimeZoneDateTimeType
 {
     /**
      * @var null|DateTimeZone 

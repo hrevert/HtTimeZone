@@ -6,7 +6,7 @@ use Doctrine\DBAL\Types\ConversionException;
 use Doctrine\DBAL\Types\DateTimeType;
 use DateTime;
 
-abstract class AbstractTimeZoneDateType extends DateTimeType
+abstract class AbstractTimeZoneDateTimeType extends DateTimeType
 {
      /**
       * @param DateTime $value
