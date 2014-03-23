@@ -5,7 +5,9 @@ return [
             'orm_default' => [
                 'types' => [
                     'utcdatetime' => 'HtTimeZone\DBAL\Types\UTCDateTimeType',
-                    'timezone' => 'HtTimeZone\DBAL\Types\TimeZoneType',
+                    'utcdate'     => 'HtTimeZone\DBAL\Types\UTCDateType',
+                    'utctime'     => 'HtTimeZone\DBAL\Types\UTCTimeType',
+                    'timezone'    => 'HtTimeZone\DBAL\Types\TimeZoneType',
                 ],
             ]
         ],
