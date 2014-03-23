@@ -20,7 +20,7 @@ abstract class AbstractTimeZoneDateTimeType extends DateTimeType
         }
         $value->setTimezone($this->getDateTimeZone()); 
 
-        return $value->format($platform->getDateTimeFormatString());
+        return $value->format($this->getFormat($platform));
     }
  
     /**
@@ -36,7 +36,7 @@ abstract class AbstractTimeZoneDateTimeType extends DateTimeType
         }
  
         $val = DateTime::createFromFormat(
-            $platform->getDateTimeFormatString(),
+            $this->getFormat($platform),
             $value,
             $this->getDateTimeZone()
         );
@@ -45,6 +45,17 @@ abstract class AbstractTimeZoneDateTimeType extends DateTimeType
         }
 
         return $val;
+    }
+
+    /**
+     * Gets format of storage 
+     *
+     * @param AbstractPlatform $platform
+     * @return string
+     */
+    protected function getFormat(AbstractPlatform $platform)
+    {
+        return $platform->getDateTimeFormatString();
     }
     
     /**
