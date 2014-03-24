@@ -5,7 +5,8 @@
     "license": "MIT",
     "keywords": [
         "zf2",
-        "module"
+        "module",
+        "timezone"
     ],
     "homepage": "https://github.com/hrevert/HtTimeZone",
     "authors": [
