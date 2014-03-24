@@ -19,9 +19,16 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.4",
         "zendframework/zend-modulemanager": "~2.1",
-        "zendframework/zend-mvc": "~2.1"
+        "zendframework/zend-mvc": "~2.1",
+        "zendframework/zend-service-manager": "~2.1",
+        "zendframework/zend-stdlib": "~2.1",
+        "zendframework/zend-view": "~2.1"
+    },
+    "suggest": {
+        "doctrine/dbal": "If you want to use dbal types provided this module",
+        "zendframework/zend-filter": "If you want to use the 3 filters provided this module"
     },
     "autoload": {
         "psr-0": {
