@@ -7,7 +7,7 @@ use Zend\ModuleManager\Feature\ServiceProviderInterface;
 use Zend\ModuleManager\Feature\ViewHelperProviderInterface;
 use Zend\ModuleManager\Feature\FilterProviderInterface;
 
-class Module implements 
+class Module implements
     AutoloaderProviderInterface,
     ConfigProviderInterface,
     ServiceProviderInterface,
@@ -88,7 +88,7 @@ class Module implements
             ],
             'invokables' => [
                 'TimeZoneConverter' => 'HtTimeZone\Filter\TimeZoneConverter',
-            ]        
+            ]
         ];
     }
 }

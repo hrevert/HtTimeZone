@@ -19,19 +19,19 @@ class TimeZoneConverter extends AbstractFilter
 
     /**
      * @var DateTimeZone
-     */    
+     */
     protected $fromTimeZone;
 
     /**
      * @var DateTimeZone
-     */ 
+     */
     protected $toTimeZone;
 
     /**
      * Constructor
      *
-     * @param DateTimeZone|null $fromTimeZone 
-     * @param DateTimeZone|null $toTimeZone 
+     * @param DateTimeZone|null $fromTimeZone
+     * @param DateTimeZone|null $toTimeZone
      */
     public function __construct(DateTimeZone $fromTimeZone = null, DateTimeZone $toTimeZone = null)
     {
@@ -46,7 +46,7 @@ class TimeZoneConverter extends AbstractFilter
     /**
      * Sets input format
      *
-     * @param string $inputFormat
+     * @param  string $inputFormat
      * @return void
      */
     public function setInputFormat($inputFormat)
@@ -57,7 +57,7 @@ class TimeZoneConverter extends AbstractFilter
     /**
      * Sets output format
      *
-     * @param string $outputFormat
+     * @param  string $outputFormat
      * @return void
      */
     public function setOutputFormat($outputFormat)
@@ -68,7 +68,7 @@ class TimeZoneConverter extends AbstractFilter
     /**
      * Sets from timezone
      *
-     * @param DateTimeZone $fromTimeZone
+     * @param  DateTimeZone $fromTimeZone
      * @return void
      */
     public function setFromTimeZone(DateTimeZone $fromTimeZone)
@@ -79,20 +79,20 @@ class TimeZoneConverter extends AbstractFilter
     /**
      * Sets to timezone
      *
-     * @param DateTimeZone $toTimeZone
+     * @param  DateTimeZone $toTimeZone
      * @return void
      */
     public function setToTimeZone(DateTimeZone $toTimeZone)
     {
         $this->toTimeZone = $toTimeZone;
     }
- 
+
     /**
      * Converts datetime from timezone to other
      *
-     * @param string|DateTime $value
+     * @param  string|DateTime $value
      * @return string|DateTime
-     */    
+     */
     public function filter($value)
     {
         if ($value instanceof DateTime) {
@@ -108,5 +108,5 @@ class TimeZoneConverter extends AbstractFilter
         }
 
         return $date;
-    }            
+    }
 }

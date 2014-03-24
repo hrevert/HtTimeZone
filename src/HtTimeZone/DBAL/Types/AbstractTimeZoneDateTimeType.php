@@ -18,14 +18,14 @@ abstract class AbstractTimeZoneDateTimeType extends DateTimeType
         if ($value === null) {
             return null;
         }
-        $value->setTimezone($this->getDateTimeZone()); 
+        $value->setTimezone($this->getDateTimeZone());
 
         return $value->format($this->getFormat($platform));
     }
- 
+
     /**
-     * @param string $value
-     * @param DoctrineDBALPlatformsAbstractPlatform $platform
+     * @param  string                                $value
+     * @param  DoctrineDBALPlatformsAbstractPlatform $platform
      * @return DateTime|mixed|null
      * @throws DoctrineDBALTypesConversionException
      */
@@ -34,7 +34,7 @@ abstract class AbstractTimeZoneDateTimeType extends DateTimeType
         if ($value === null) {
             return null;
         }
- 
+
         $val = DateTime::createFromFormat(
             $this->getFormat($platform),
             $value,
@@ -48,20 +48,20 @@ abstract class AbstractTimeZoneDateTimeType extends DateTimeType
     }
 
     /**
-     * Gets format of storage 
+     * Gets format of storage
      *
-     * @param AbstractPlatform $platform
+     * @param  AbstractPlatform $platform
      * @return string
      */
     protected function getFormat(AbstractPlatform $platform)
     {
         return $platform->getDateTimeFormatString();
     }
-    
+
     /**
      * Gets DateTimeZone
      *
      * @return \DateTimeZone
      */
-    abstract protected function getDateTimeZone();    
+    abstract protected function getDateTimeZone();
 }

@@ -12,7 +12,7 @@ class ModuleOptionsTest extends \PHPUnit_Framework_TestCase
         $moduleOptions = new ModuleOptions(array(
             'default_client_time_zone' => 'Asia/Kathmandu',
             'region' => DateTimeZone::EUROPE,
-            'asdfasf' => 'asdfsdf', 
+            'asdfasf' => 'asdfsdf',
             'server_time_zone' => 'Asia/Kathmandu',// test strict mode
 
         ));

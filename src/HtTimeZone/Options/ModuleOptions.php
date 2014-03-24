@@ -29,7 +29,7 @@ class ModuleOptions extends AbstractOptions
     /**
      * Sets defaultClientTimeZone
      *
-     * @param string|DateTimeZone $defaultClientTimeZone
+     * @param  string|DateTimeZone $defaultClientTimeZone
      * @return void
      */
     public function setDefaultClientTimeZone($defaultClientTimeZone)
@@ -57,7 +57,7 @@ class ModuleOptions extends AbstractOptions
     /**
      * Sets region
      *
-     * @param int $region
+     * @param  int  $region
      * @return void
      */
     public function setRegion($region)
@@ -68,7 +68,7 @@ class ModuleOptions extends AbstractOptions
     /**
      * Gets region
      *
-     * @return int 
+     * @return int
      */
     public function getRegion()
     {
@@ -82,9 +82,9 @@ class ModuleOptions extends AbstractOptions
     /**
      * Sets serverTimeZone
      *
-     * @param string|DateTimeZone $serverTimeZone
+     * @param  string|DateTimeZone $serverTimeZone
      * @return void
-     */    
+     */
     public function setServerTimeZone($serverTimeZone)
     {
         if (is_string($serverTimeZone)) {

@@ -11,7 +11,7 @@ class User extends \ZfcUser\Entity\User
     /**
      * Sets timeZone
      *
-     * @param string $timezone
+     * @param  string $timezone
      * @return self
      */
     public function setTimeZone($timeZone)

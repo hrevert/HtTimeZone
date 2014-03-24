@@ -6,9 +6,9 @@ use DateTimeZone;
 class UTCDateType extends AbstractTimeZoneDateType
 {
     /**
-     * @var null|DateTimeZone 
+     * @var null|DateTimeZone
      */
-    static private $utc = null;
+    private static $utc = null;
 
     /**
      * {@inheritDoc}
