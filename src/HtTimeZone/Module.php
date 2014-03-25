@@ -49,10 +49,10 @@ class Module implements
             'factories' => [
                 'HtTimeZone\TimeZoneService' => 'HtTimeZone\Factory\TimeZoneServiceFactory',
                 'HtTimeZone\ModuleOptions' => 'HtTimeZone\Factory\ModuleOptionsFactory',
-                'HtTimeZone\ZfcUserTimeZoneProvider' => 'HtTimeZone\Factory\ZfcUserTimeZoneProviderFactory',
+                'HtTimeZone\Provider\ZfcUserTimeZoneProvider' => 'HtTimeZone\Factory\ZfcUserTimeZoneProviderFactory',
             ],
             'aliases' => [
-                'HtTimeZone\ClientTimeZoneProvider' => 'HtTimeZone\ZfcUserTimeZoneProvider',
+                'HtTimeZone\ClientTimeZoneProvider' => 'HtTimeZone\Provider\ZfcUserTimeZoneProvider',
             ]
         ];
     }

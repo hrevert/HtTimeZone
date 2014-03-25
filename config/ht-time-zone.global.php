@@ -14,10 +14,12 @@ $moduleOptions = array(
      * Please specify the service manager alias for the configured timezone provider that this module should use.
      * This must implement HtTimeZone\Provider\TimeZoneProviderInterface
      *
-     * Default is HtTimeZone\ZfcUserTimeZoneProvider (compatible with ZfcUser)
-     * To use the default visit this link:
+     * Default is HtTimeZone\ZfcUserTimeZoneProvider 
+     * (compatible with ZfcUser, assumes the user entity has method, `getTimeZone`)
+     *
+     * To use the default visit this link: https://github.com/hrevert/HtTimeZone/blob/master/src/HtTimeZone/Provider/ZfcUserTimeZoneProvider.php
      */
-     // 'client_time_zone_provider' => 'HtTimeZone\ZfcUserTimeZoneProvider',
+    'client_time_zone_provider' => 'HtTimeZone\Provider\ZfcUserTimeZoneProvider',
 
     /**
      * Default Timezone
@@ -53,7 +55,7 @@ return array(
     'ht_time_zone' => $moduleOptions,
     'service_manager' => array(
         'aliases' => array(
-            'HtTimeZone\ClientTimeZoneProvider' => $moduleOptions['time_zone_provider'],
+            'HtTimeZone\ClientTimeZoneProvider' => $moduleOptions['client_time_zone_provider'],
         )
     )
 );

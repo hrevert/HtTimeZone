@@ -29,14 +29,11 @@
     },
     "suggest": {
         "doctrine/dbal": "If you want to use dbal types provided this module",
-        "zendframework/zend-filter": "If you want to use the 3 filters provided this module"
+        "zendframework/zend-filter": "If you want to use the timezone converter(filters) provided this module"
     },
     "autoload": {
         "psr-0": {
             "HtTimeZone": "src/"
-        },
-        "classmap": [
-            "./Module.php"
-        ]
+        }
     }
 }

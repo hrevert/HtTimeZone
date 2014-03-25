@@ -3,7 +3,7 @@ namespace HtTimeZone\Filter\Factory;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use HtTimeZone\Filter\ServerToClientTimeZone;
+use HtTimeZone\Filter\TimeZoneConverter;
 
 class ServerToClientTimeZoneFactory implements FactoryInterface
 {
@@ -12,9 +12,9 @@ class ServerToClientTimeZoneFactory implements FactoryInterface
         $serviceLocator = $filters->getServiceLocator();
         $options = $serviceLocator->get('HtTimeZone\ModuleOptions');
 
-        return new ServerToClientTimeZone(
-            $serviceLocator->get('HtTimeZone\TimeZoneService')->getClientTimeZone(),
+        return new TimeZoneConverter(
             $options->getServerTimeZone()
+            $serviceLocator->get('HtTimeZone\TimeZoneService')->getClientTimeZone(),            
         );
     }
 }

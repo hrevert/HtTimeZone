@@ -55,6 +55,16 @@ class TimeZoneConverter extends AbstractFilter
     }
 
     /**
+     * Gets input format
+     *
+     * @return string|null
+     */
+    public function getInputFormat()
+    {
+        return $this->inputFormat;
+    }
+
+    /**
      * Sets output format
      *
      * @param  string $outputFormat
@@ -63,6 +73,16 @@ class TimeZoneConverter extends AbstractFilter
     public function setOutputFormat($outputFormat)
     {
         $this->outputFormat = $outputFormat;
+    }
+
+    /**
+     * Gets output format
+     *
+     * @return string|null
+     */
+    public function getOutputFormat()
+    {
+        return $this->outputFormat;
     }
 
     /**
@@ -77,6 +97,16 @@ class TimeZoneConverter extends AbstractFilter
     }
 
     /**
+     * Gets from timezone
+     *
+     * @return DateTimeZone
+     */
+    public function getFromTimeZone()
+    {
+        return $this->fromTimeZone;
+    }
+
+    /**
      * Sets to timezone
      *
      * @param  DateTimeZone $toTimeZone
@@ -85,6 +115,16 @@ class TimeZoneConverter extends AbstractFilter
     public function setToTimeZone(DateTimeZone $toTimeZone)
     {
         $this->toTimeZone = $toTimeZone;
+    }
+
+    /**
+     * Gets to timezone
+     *
+     * @return DateTimeZone
+     */
+    public function getToTimeZone()
+    {
+        return $this->toTimeZone;
     }
 
     /**
@@ -97,14 +137,14 @@ class TimeZoneConverter extends AbstractFilter
     {
         if ($value instanceof DateTime) {
             $date = $value;
-        } elseif ($this->inputFormat) {
-            $date = DateTime::createFromFormat($this->inputFormat, $value, $this->fromTimeZone);
+        } elseif ($this->getInputFormat()) {
+            $date = DateTime::createFromFormat($this->getInputFormat(), $value, $this->getFromTimeZone());
         } else {
-            $date = new DateTime($value, $this->fromTimeZone);
+            $date = new DateTime($value, $this->getFromTimeZone());
         }
-        $date->setTimezone($this->toTimeZone);
-        if ($this->outputFormat) {
-            return $date->format($this->outputFormat);
+        $date->setTimezone($this->getToTimeZone());
+        if ($this->getOutputFormat()) {
+            return $date->format($this->getOutputFormat());
         }
 
         return $date;
