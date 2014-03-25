@@ -5,10 +5,10 @@ This module comes with some filters related to timezone. If you don`t know filte
 ## Included filters
 1. [HtTimeZone\Filter\TimeZoneConverter](../src/HtTimeZone/Filter/TimeZoneConverter.php)
 2. `ClientToServerTimeZone`
-3. 'HtTimeZone\Filter\ServerToClientTimeZone`
+3. `ServerToClientTimeZone`
 
-## Usage
-1. `HtTimeZone\Filter\TimeZoneConverter`
+##Usage
+### HtTimeZone\Filter\TimeZoneConverter
 
 This filter is pretty simple. 
 ```php
@@ -18,14 +18,14 @@ echo $filter->filter(new DateTime());
 
 To get more understanding of how this filter works, the best way is to dig the code [here](../src/Filter/TimeZoneConverter.php).
 
-2. `HtTimeZone\Filter\ServerToClientTimeZone`
+### HtTimeZone\Filter\ServerToClientTimeZone
 
 ```php
 $filter = $this->getServiceLocator()->get('FilterManager')->get('ServerToClientTimeZone');
 echo $filter->filter(new DateTime());
 ```
 
-3. `HtTimeZone\Filter\ClientToServerTimeZone`
+### HtTimeZone\Filter\ClientToServerTimeZone
 
 ```php
 $filter = $this->getServiceLocator()->get('FilterManager')->get('ClientToServerTimeZone');
