@@ -1,6 +1,10 @@
-UTCDateTimeType
-===================
-If you use Doctrine DBAL and you want to store user's data in the same timezone, this module also comes with `UTCDateTimeType`.
+If you use doctrine DBAL, then you can use DBAL types provided this module which automate timezone conversion.
+
+## Included DBAL types
+1. [HtTimeZone\DBAL\Types\UTCDateTimeType](https://github.com/hrevert/HtTimeZone/tree/master/src/HtTimeZone/DBAL/Types/UTCDateTimeType.php)  
+3. [HtTimeZone\DBAL\Types\UTCTimeType](https://github.com/hrevert/HtTimeZone/tree/master/src/HtTimeZone/DBAL/Types/UTCTimeType.php)
+
+## Usage
 
 ```php
 /**
@@ -20,8 +24,9 @@ class Event
     ...
 }
 ```
+
 ## Storing time in other timezones(NOT UTC)
-Lets say you want to store user's time zone in the same timezone(NOT UTC), say `Asia/Kathmandu`.
+Suppose you want to store other timezone (NOT UTC), say `Asia/Kathmandu`.
 
 ```php
 <?php
@@ -29,7 +34,7 @@ namespace Application\DBAL\Types;
 
 use DateTimeZone;
 
-class KtmDateTimeType extends AbstractTimeZoneDateType
+class KtmDateTimeType extends AbstractTimeZoneDateTimeType
 {
     /**
      * @var null|DateTimeZone 
