@@ -23,7 +23,7 @@ class TimeZoneConverter implements StrategyInterface
             $this->setExtractTimeZone($extractTimeZone);
         }
         if ($hydrateTimeZone) {
-            $this->setExtractTimeZone($hydrateTimeZone);
+            $this->setHydrateTimeZone($hydrateTimeZone);
         }
     }
 
