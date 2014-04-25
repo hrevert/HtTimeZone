@@ -5,7 +5,7 @@ use Zend\Stdlib\Hydrator\Strategy\StrategyInterface;
 use DateTime;
 use DateTimeZone;
 
-class TimeZone implements StrategyInterface
+class TimeZoneConverter implements StrategyInterface
 {
     /**
      * @var DateTimeZone    Target Timezone for hydrating to object
