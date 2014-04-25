@@ -1,5 +1,5 @@
 <?php
-namespace HtTimezone\Stdlib\Hydrator\Strategy;
+namespace HtTimeZone\Stdlib\Hydrator\Strategy;
 
 use Zend\Stdlib\Hydrator\Strategy\StrategyInterface;
 use DateTime;

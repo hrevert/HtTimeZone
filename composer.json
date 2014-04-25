@@ -27,6 +27,10 @@
         "zendframework/zend-stdlib": "~2.1",
         "zendframework/zend-view": "~2.1"
     },
+    "require-dev": {
+        "zendframework/zend-filter": "~2.1",
+        "zendframework/zend-stdlib": "~2.1"
+    },
     "suggest": {
         "doctrine/dbal": "If you want to use dbal types provided this module",
         "zendframework/zend-filter": "If you want to use the timezone converter(filters) provided this module"
