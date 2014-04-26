@@ -17,7 +17,8 @@ If you use doctrine DBAL, then you can use DBAL types provided this module which
 
 #### Included DBAL types
 1. [`HtTimeZone\DBAL\Types\UTCDateTimeType`](https://github.com/hrevert/HtTimeZone/tree/master/src/HtTimeZone/DBAL/Types/UTCDateTimeType.php)
-3. [`HtTimeZone\DBAL\Types\UTCTimeType`](https://github.com/hrevert/HtTimeZone/tree/master/src/HtTimeZone/DBAL/Types/UTCTimeType.php)
+2. [`HtTimeZone\DBAL\Types\UTCTimeType`](https://github.com/hrevert/HtTimeZone/tree/master/src/HtTimeZone/DBAL/Types/UTCTimeType.php)
+3. ['HtTimeZone\DBAL\Types\TimeZoneType'](https://github.com/hrevert/HtTimeZone/tree/master/src/HtTimeZone/DBAL/Types/TimeZoneType.php)
 
 ## Usage
 
@@ -38,6 +39,27 @@ class Event
  
     ...
 }
+```
+
+Suppose, you want to store user's timezone;
+```php
+<?php
+/**
+ * @Entity
+ * @Table(name="user)
+ */
+class User
+{
+    ...
+ 
+    /**
+     * @Column(type="TimeZone")
+     * @var DateTimeZone
+     */
+     protected $timeZone;
+ 
+    ...
+} 
 ```
 
 Suppose you want to store time in other timezone (NOT UTC), say `Asia/Kathmandu`.
