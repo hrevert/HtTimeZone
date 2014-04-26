@@ -12,7 +12,7 @@ class ModuleOptions extends AbstractOptions
     protected $__strictMode__ = false;
 
     /**
-     * @var string|DateTimeZone
+     * @var DateTimeZone
      */
     protected $defaultClientTimeZone;
 
@@ -22,9 +22,9 @@ class ModuleOptions extends AbstractOptions
     protected $region;
 
     /**
-     * @var string||DateTimeZone
+     * @var DateTimeZone
      */
-    protected $serverTimeZone = 'UTC';
+    protected $serverTimeZone;
 
     /**
      * Sets defaultClientTimeZone
@@ -100,11 +100,9 @@ class ModuleOptions extends AbstractOptions
      */
     public function getServerTimeZone()
     {
-        $serverTimeZone = $this->serverTimeZone;
-        if (is_string($serverTimeZone)) {
-            $this->setServerTimeZone($serverTimeZone);
+        if (!$this->serverTimeZone) {
+            $this->serverTimeZone = new DateTimeZone('UTC');            
         }
-
-        return $serverTimeZone;
+        return $this->serverTimeZone;
     }
 }
