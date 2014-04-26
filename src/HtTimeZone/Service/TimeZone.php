@@ -71,4 +71,9 @@ class TimeZone
 
         return $this->getModuleOptions()->getDefaultClientTimeZone();
     }
+
+    public function getServerTimeZone()
+    {
+        return $this->getModuleOptions()->getServerTimeZone();
+    }
 }
