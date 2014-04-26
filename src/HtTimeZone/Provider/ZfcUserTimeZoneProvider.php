@@ -38,7 +38,7 @@ class ZfcUserTimeZoneProvider implements TimeZoneProviderInterface
     {
         if (
             $this->getAuthenticationService()->hasIdentity() &&
-            $this->getAuthenticationService()->getIdentity()->getTimezone()
+            $this->getAuthenticationService()->getIdentity()->getTimeZone()
         ) {
             return $this->getAuthenticationService()->getIdentity()->getTimeZone();
         }
