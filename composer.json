@@ -37,8 +37,8 @@
         "zendframework/zend-filter": "If you want to use the timezone converter(filters) provided this module"
     },
     "autoload": {
-        "psr-0": {
-            "HtTimeZone": "src/"
+        "psr-4": {
+            "HtTimeZone\\": "src/"
         }
     }
 }
