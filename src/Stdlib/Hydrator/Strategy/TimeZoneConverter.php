@@ -5,6 +5,9 @@ use Zend\Stdlib\Hydrator\Strategy\StrategyInterface;
 use DateTime;
 use DateTimeZone;
 
+/**
+ * Converts date of timezone to another
+ */
 class TimeZoneConverter implements StrategyInterface
 {
     /**

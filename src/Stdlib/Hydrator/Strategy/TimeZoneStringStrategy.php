@@ -5,10 +5,12 @@ use Zend\Stdlib\Hydrator\Strategy\StrategyInterface;
 use DateTime;
 use DateTimeZone;
 
+/**
+ * Converts string to instance of DateTimeZone for injecting to object And Converts instance of DateTimeZone to string
+ */
 class TimeZoneStringStrategy implements StrategyInterface
 {
     /**
-     * Converts string to instance of DateTimeZone for injecting to object
      *
      * @param string|DateTimeZone $value
      * @return DateTimeZone
