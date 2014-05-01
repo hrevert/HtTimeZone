@@ -158,6 +158,8 @@ echo $this->htTimeInterval(time() - 10); // will print `10 seconds ago`
 ```
 
 ### Hydrator Strategies
+1. [`HtTimeZone\Stdlib\Hydrator\Strategy\TimeZoneConverter`](/src/Stdlib/Hydrator/Strategy/TimeZoneConverter.php)
+2. [`HtTimeZone\Stdlib\Hydrator\Strategy\TimeZoneStringStrategy`](/src/Stdlib/Hydrator/Strategy/TimeZoneStringStrategy.php)
 
 ### WIP
 This is a work in progress. Use at your own risk!
