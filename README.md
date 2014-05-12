@@ -16,9 +16,9 @@ To use this module you will have to store all the dates in a fixed timezone(UTC 
 If you use doctrine DBAL, then you can use DBAL types provided this module which automate timezone conversion.
 
 #### Included DBAL types
-1. [`HtTimeZone\DBAL\Types\UTCDateTimeType`](https://github.com/hrevert/HtTimeZone/tree/master/src/HtTimeZone/DBAL/Types/UTCDateTimeType.php)
-2. [`HtTimeZone\DBAL\Types\UTCTimeType`](https://github.com/hrevert/HtTimeZone/tree/master/src/HtTimeZone/DBAL/Types/UTCTimeType.php)
-3. [`HtTimeZone\DBAL\Types\TimeZoneType`](https://github.com/hrevert/HtTimeZone/tree/master/src/HtTimeZone/DBAL/Types/TimeZoneType.php)
+1. [`HtTimeZone\DBAL\Types\UTCDateTimeType`](https://github.com/hrevert/HtTimeZone/tree/master/src/DBAL/Types/UTCDateTimeType.php)
+2. [`HtTimeZone\DBAL\Types\UTCTimeType`](https://github.com/hrevert/HtTimeZone/tree/master/src/DBAL/Types/UTCTimeType.php)
+3. [`HtTimeZone\DBAL\Types\TimeZoneType`](https://github.com/hrevert/HtTimeZone/tree/master/src/DBAL/Types/TimeZoneType.php)
 
 ## Usage
 
