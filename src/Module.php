@@ -47,6 +47,7 @@ class Module implements
                 'HtTimeZone\TimeZoneService' => 'HtTimeZone\Factory\TimeZoneServiceFactory',
                 'HtTimeZone\ModuleOptions' => 'HtTimeZone\Factory\ModuleOptionsFactory',
                 'HtTimeZone\Provider\ZfcUserTimeZoneProvider' => 'HtTimeZone\Factory\ZfcUserTimeZoneProviderFactory',
+                'HtTimeZone\Provider\MaxmindProvider' => 'HtTimeZone\Factory\MaxmindTimeZoneProviderFactory',
             ],
             'aliases' => [
                 'HtTimeZone\ClientTimeZoneProvider' => 'HtTimeZone\Provider\ZfcUserTimeZoneProvider',
