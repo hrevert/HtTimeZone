@@ -48,6 +48,7 @@ class Module implements
                 'HtTimeZone\ModuleOptions' => 'HtTimeZone\Factory\ModuleOptionsFactory',
                 'HtTimeZone\Provider\ZfcUserTimeZoneProvider' => 'HtTimeZone\Factory\ZfcUserTimeZoneProviderFactory',
                 'HtTimeZone\ClientSideTimeZoneDetectionService' => 'HtTimeZone\Factory\ClientSideTimeZoneDetectionServiceFactory',
+                'HtTimeZone\Provider\ClientSideTimeZoneProvider' => 'HtTimeZone\Factory\ClientSideTimeZoneProviderFactory',
             ],
             'aliases' => [
                 'HtTimeZone\ClientTimeZoneProvider' => 'HtTimeZone\Provider\ZfcUserTimeZoneProvider',
