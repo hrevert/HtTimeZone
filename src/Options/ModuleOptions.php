@@ -27,6 +27,11 @@ class ModuleOptions extends AbstractOptions
     protected $serverTimeZone;
 
     /**
+     * @var bool
+     */
+    protected $enableClientSideTimeZoneDetection = true;
+
+    /**
      * Sets defaultClientTimeZone
      *
      * @param  string|DateTimeZone $defaultClientTimeZone
@@ -104,5 +109,26 @@ class ModuleOptions extends AbstractOptions
             $this->serverTimeZone = new DateTimeZone('UTC');            
         }
         return $this->serverTimeZone;
+    }
+
+    /**
+     * Sets enableClientSideTimeZoneDetection
+     *
+     * @param  bool $enableClientSideTimeZoneDetection
+     * @return self
+     */
+    public function setEnableClientSideTimeZoneDetection($enableClientSideTimeZoneDetection)
+    {
+        $this->enableClientSideTimeZoneDetection = $enableClientSideTimeZoneDetection;
+    }
+
+    /**
+     * Gets enableClientSideTimeZoneDetection
+     *
+     * @return  bool
+     */
+    public function getEnableClientSideTimeZoneDetection()
+    {
+        return $this->enableClientSideTimeZoneDetection;
     }
 }
