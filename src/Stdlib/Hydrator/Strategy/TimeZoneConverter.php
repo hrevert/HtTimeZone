@@ -39,9 +39,6 @@ class TimeZoneConverter implements StrategyInterface
 
     public function getHydrateTimeZone()
     {
-        if (!$this->hydrateTimeZone) {
-            $this->hydrateTimeZone = new DateTimeZone('UTC');
-        }
         return $this->hydrateTimeZone;
     }
 
@@ -62,7 +59,7 @@ class TimeZoneConverter implements StrategyInterface
      */
     public function hydrate($value)
     {
-        if ($value instanceof DateTime) {
+        if ($value instanceof DateTime && $this->getHydrateTimeZone() instanceof DateTimeZone) {
             return $value->setTimezone($this->getHydrateTimeZone());
         }
 
@@ -74,7 +71,7 @@ class TimeZoneConverter implements StrategyInterface
      */
     public function extract($value)
     {
-        if ($value instanceof DateTime) {
+        if ($value instanceof DateTime && $this->getExtractTimeZone() instanceof DateTimeZone) {
             return $value->setTimezone($this->getExtractTimeZone());
         }
 
