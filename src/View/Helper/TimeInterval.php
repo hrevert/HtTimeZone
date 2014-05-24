@@ -15,14 +15,16 @@ class TimeInterval extends AbstractHelper
 
         if ($dateTime instanceof DateTime || is_string($dateTime)) {
             return $this->fromDateTime($dateTime);
-        } elseif (is_float($dateTime) || is_int($dateTime)) {
+        } elseif (is_numeric($dateTime)) {
             return $this->fromTimeStamp($dateTime);
         }
 
         throw new Exception\InvalidArgumentException(
-            sprintf('%s expects parameter 1 to be timestamp or an instance of DateTime, %s provided instead'),
-            __METHOD__,
-            is_object($dateTime) ? get_class($dateTime) : gettype($dateTime)
+            sprintf(
+                '%s expects parameter 1 to be timestamp or an instance of DateTime, %s provided instead',
+                __METHOD__,
+                is_object($dateTime) ? get_class($dateTime) : gettype($dateTime)
+            )
         );
     }
 
