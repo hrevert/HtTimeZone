@@ -70,7 +70,7 @@ namespace Application\DBAL\Types;
 
 use DateTimeZone;
 
-class KtmDateTimeType extends AbstranctTimeZoneDateTimeType
+class KtmDateTimeType extends AbstractTimeZoneDateTimeType
 {
     /**
      * @var null|DateTimeZone 
