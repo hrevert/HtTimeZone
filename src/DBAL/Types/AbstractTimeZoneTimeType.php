@@ -1,6 +1,8 @@
 <?php
 namespace HtTimeZone\DBAL\Types;
 
+use Doctrine\DBAL\Platforms\AbstractPlatform;
+
 abstract class AbstractTimeZoneTimeType extends AbstractTimeZoneDateTimeType
 {
     /**
