@@ -30,11 +30,13 @@
         "zendframework/zend-view": "~2.1"
     },
     "require-dev": {
-        "zendframework/zend-filter": "~2.1"
+        "zendframework/zend-filter": "~2.1",
+        "snapshotpl/zf-snap-geoip": "2.*"
     },
     "suggest": {
         "doctrine/dbal": "If you want to use dbal types provided this module",
-        "zendframework/zend-filter": "If you want to use the timezone converter(filters) provided this module"
+        "zendframework/zend-filter": "If you want to use the timezone converter(filters) provided this module",
+        "snapshotpl/zf-snap-geoip": "If you want to use maxwind PHP API to detect client timezone"
     },
     "autoload": {
         "psr-4": {
